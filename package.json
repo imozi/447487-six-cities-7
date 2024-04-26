@@ -1,6 +1,6 @@
 {
   "name": "six-cities",
-  "version": "7.0.0",
+  "version": "1.0.0",
   "description": "Проект «Шесть городов» от HTML Academy",
   "keywords": [
     "rest",
@@ -10,7 +10,7 @@
   "main": "main.js",
   "scripts": {
     "start": "npm run build && node ./dist/main.js",
-    "build": "npm run clean && npm run compile",
+    "cli": "npm run ts ./src/cli.ts --",
     "lint": "eslint src/ --ext .ts",
     "compile": "tsc -p tsconfig.json",
     "clean": "rimraf dist",
