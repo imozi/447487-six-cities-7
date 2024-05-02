@@ -1,4 +1,4 @@
 export enum Roles {
-  simple = "simple",
-  pro = "pro",
+  simple = 'simple',
+  pro = 'pro',
 }
