@@ -2,11 +2,11 @@ import chalk from 'chalk';
 import { ICommand } from '../libs/contracts/command.interface.js';
 
 export class HelpCommand implements ICommand {
-  getName(): string {
+  public getName(): string {
     return '--help';
   }
 
-  async execute(..._parameters: string[]): Promise<void> {
+  public async execute(..._parameters: string[]): Promise<void> {
     console.info(`
     ${chalk.bold.blueBright('Программа для подготовки данных для REST API сервера.')}
 

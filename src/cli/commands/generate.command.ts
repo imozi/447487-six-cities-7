@@ -40,7 +40,7 @@ export class GenerateCommand implements ICommand {
     }
   }
 
-  async execute(...parameters: string[]): Promise<void> {
+  public async execute(...parameters: string[]): Promise<void> {
     const [count, filePath, url] = parameters;
 
     try {

@@ -10,16 +10,16 @@ type PackageJSONConfig = {
 export class VersionCommand implements ICommand {
   constructor(private readonly filePath: string = 'package.json') {}
 
+  public getName(): string {
+    return '--version';
+  }
+
   private async _readVersion(): Promise<string> {
     const { version } = (await new FileReader().read<PackageJSONConfig>(
       this.filePath,
       FileTypes.json,
     )) as PackageJSONConfig;
     return version;
-  }
-
-  public getName(): string {
-    return '--version';
   }
 
   public async execute(..._parameters: string[]): Promise<void> {

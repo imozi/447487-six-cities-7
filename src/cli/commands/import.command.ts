@@ -74,7 +74,7 @@ export class ImportCommand implements ICommand {
     new FileReader().read(filePath, FileTypes.tsv, callbacks);
   }
 
-  async execute(...parameters: string[]): Promise<void> {
+  public async execute(...parameters: string[]): Promise<void> {
     const [filePath] = parameters;
     await this._read(filePath);
   }

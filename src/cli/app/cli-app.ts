@@ -60,7 +60,6 @@ export class CLIApplication {
 
     for (const [key, args] of Object.entries(commands)) {
       this._hasCommand(key);
-
       await this._commands.get(key)?.execute(...args);
     }
   }
