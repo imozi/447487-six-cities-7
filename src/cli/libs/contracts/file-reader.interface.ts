@@ -1,6 +1,5 @@
-import { FileTypes } from '../../../shared/enums/file-types.enum.js';
-import { ITypeReader } from './type-reader.interface.js';
+import { Callbacks, FileTypes } from '../types/index.js';
 
-export interface IFileReader extends Omit<ITypeReader, 'read'| 'type'> {
-  read<T>(filePath: string, fileType: FileTypes): T | never;
+export interface IFileReader {
+  read<T>(filePath: string, fileType: FileTypes, callbacks?: Callbacks): Promise<T | never | void>;
 }
