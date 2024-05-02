@@ -1,1 +1,1 @@
-export { CLIApplication } from "./cli-app.js";
+export { CLIApplication } from './cli-app.js';

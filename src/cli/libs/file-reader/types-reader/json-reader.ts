@@ -18,9 +18,9 @@ export class JSONReader extends EventEmitter implements ITypeReader {
     jsonStream.on('data', (chunk) => (bufferData += chunk));
 
     try {
-      await new Promise((resolve, reject) => {
-        jsonStream.once('end', () => resolve(true));
-        jsonStream.once('error', () => reject(false));
+      await new Promise((res, rej) => {
+        jsonStream.once('end', () => res(true));
+        jsonStream.once('error', () => rej(false));
       });
 
       return JSON.parse(bufferData);

@@ -30,12 +30,12 @@ export class TSVReader extends EventEmitter implements ITypeReader {
     });
 
     try {
-      await new Promise((resolve, reject) => {
+      await new Promise((res, rej) => {
         tsvStream.once('end', () => {
-          resolve(true);
-          this.emit('end');
+          res(true);
+          this.emit('end', importedRowCount);
         });
-        tsvStream.once('error', () => reject(false));
+        tsvStream.once('error', () => rej(false));
       });
     } catch (error: unknown) {
       tsvStream.close();

@@ -55,10 +55,10 @@ export class ImportCommand implements ICommand {
     };
   }
 
-  private _importData = (...args: string[]) => {
+  private _importData = (...args: unknown[]) => {
     const [part] = args;
 
-    console.log(this._generateOffer(part));
+    console.log(this._generateOffer(part as string));
   };
 
   private _complateImportData = () => {

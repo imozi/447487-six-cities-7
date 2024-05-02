@@ -51,14 +51,14 @@ export class CLIApplication {
   }
 
   public async runCommands(argv: string[]): Promise<void> {
-    const commands = this._commandsParser(argv);
+    const commandsParsed = this._commandsParser(argv);
 
-    if (isEmpty(commands)) {
+    if (isEmpty(commandsParsed)) {
       this._runDefaultCommand();
       return;
     }
 
-    for (const [key, args] of Object.entries(commands)) {
+    for (const [key, args] of Object.entries(commandsParsed)) {
       this._hasCommand(key);
       await this._commands.get(key)?.execute(...args);
     }

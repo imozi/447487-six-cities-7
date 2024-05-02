@@ -1,4 +1,4 @@
 export type Callbacks = {
-  part: (...args: any[]) => any;
-  end: (...args: any[]) => any;
+  part: (...args: unknown[]) => unknown;
+  end: (...args: unknown[]) => unknown;
 };
