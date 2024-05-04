@@ -1,0 +1,74 @@
+{
+	"api": {
+    "user": {
+      "firstName": ["John", "Jane", "Alice", "Bob", "Charlie", "David", "Eve", "Frank", "Grace", "Heidi"],
+      "lastName": ["Smith", "Doe", "Johnson", "Brown", "Williams", "Jones", "Davis", "Miller", "Wilson", "Taylor"],
+      "email": ["john@example.com", "jane@example.com", "alice@example.com", "bob@example.com", "charlie@example.com"],
+      "password": ["password1", "password2", "password3", "password4", "password5"],
+      "avatar": ["https://example.com/avatar1.jpg", "https://example.com/avatar2.jpg", "https://example.com/avatar3.jpg", "https://example.com/avatar4.jpg", "https://example.com/avatar5.jpg"]
+    },
+    "offer": {
+      "title": ["Cozy apartment", "Spacious house", "Modern studio", "Beautiful villa", "Charming cottage"],
+      "description": ["A quiet and cozy apartment in the city center", "A spacious house with a beautiful garden", "A modern studio in a trendy neighborhood", "A beautiful villa with a pool and a sea view", "A charming cottage in the countryside"],
+      "previewImg": ["https://example.com/preview1.jpg", "https://example.com/preview2.jpg", "https://example.com/preview3.jpg", "https://example.com/preview4.jpg", "https://example.com/preview5.jpg"],
+      "photos": ["https://example.com/photo1.jpg", "https://example.com/photo2.jpg", "https://example.com/photo3.jpg", "https://example.com/photo4.jpg", "https://example.com/photo5.jpg"],
+      "isPremium": [false, true],
+      "isFavorites": [false, true],
+      "numberOfRooms": [1,6,4,7,5,8,2,3],
+      "numberOfGuests": [1,7,4,2,9,5,8,6,10,3],
+      "rentPrice": [100,10000,30000,25000,100000,74999,45000,1500,3000],
+      "numberOfComments": []
+    },
+    "comments": {
+      "text": ["Great place!", "Loved the location.", "The host was very friendly.", "The apartment was clean and comfortable.", "Would definitely stay here again!"]
+    },
+    "rating": [1,4,2,5,3],
+    "typeOfHousing": ["apartment", "house", "room", "hotel"],
+    "roles": ["simple", "pro"],
+    "facilities": [ "breakfast", "airConditioning","laptopFriendly", "workspace", "babySeat", "washer", "towels","fridge"],
+    "city": [
+      {
+        "name": "Paris",
+        "coordinates": {
+          "latitude": 48.85661,
+          "longitude": 2.351499
+        }
+      },
+      {
+        "name": "Cologne",
+        "coordinates": {
+          "latitude": 50.938361,
+          "longitude": 6.959974
+        }
+      },
+      {
+        "name": "Brussels",
+        "coordinates": {
+          "latitude": 50.846557,
+          "longitude": 4.351697
+        }
+      },
+      {
+        "name": "Amsterdam",
+        "coordinates": {
+          "latitude": 52.370216,
+          "longitude": 4.895168
+        }
+      },
+      {
+        "name": "Hamburg",
+        "coordinates": {
+          "latitude": 53.550341,
+          "longitude": 10.000654
+        }
+      },
+      {
+        "name": "Dusseldorf",
+        "coordinates": {
+          "latitude": 51.225402,
+          "longitude": 6.776314
+        }
+      }
+    ]
+  }
+}
