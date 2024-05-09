@@ -9,6 +9,7 @@ export class RestApplication {
     @inject(Component.Logger) private readonly logger: Logger,
     @inject(Component.Config) private readonly config: Config<RestSchema>,
   ) {}
+
   public async init() {
     this.logger.info(`🚀 Приложение инициализировано на порту: ${this.config.get('PORT')}!`);
     this.logger.info(`💾 Подключение к базе по адресу: ${this.config.get('DB_HOST')}!`);
