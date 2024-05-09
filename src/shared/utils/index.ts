@@ -1,2 +1,2 @@
 export { isEmpty } from './isEmpty.js';
-export * as common from './common.js';
+export { generateRandomValue, getRandomDay, getRandomItem, getCurrentModuleDirectoryPath } from './common.js';

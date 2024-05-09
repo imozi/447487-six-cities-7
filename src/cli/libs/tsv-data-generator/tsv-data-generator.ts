@@ -1,9 +1,8 @@
 import { MockServerData } from '../../../shared/types/index.js';
 import { DataGenerateType } from '../types/enum/data-generate-type.enum.js';
-import { common } from '../../../shared/utils/index.js';
+import { getRandomDay, getRandomItem } from '../../../shared/utils/index.js';
 import { IDataGenerator } from '../contracts/tsv-data-generator.interface.js';
 
-const { getRandomItem, getRandomDay } = common;
 
 type Generators = Record<DataGenerateType, (data: MockServerData) => string>;
 
