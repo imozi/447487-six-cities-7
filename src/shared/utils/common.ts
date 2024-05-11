@@ -1,4 +1,6 @@
 import dayjs from 'dayjs';
+import { fileURLToPath } from 'node:url';
+import { dirname } from 'node:path';
 
 export const generateRandomValue = (min: number, max: number, numAfterDigit = 0) =>
   +(Math.random() * (max - min) + min).toFixed(numAfterDigit);
@@ -11,3 +13,9 @@ export const getRandomDay = () => {
 
   return dayjs().subtract(generateRandomValue(FIRST_WEEK_DAY, LAST_WEEK_DAY), 'day').toISOString();
 };
+
+
+export function getCurrentModuleDirectoryPath() {
+  const filepath = fileURLToPath(import.meta.url);
+  return dirname(filepath);
+}
