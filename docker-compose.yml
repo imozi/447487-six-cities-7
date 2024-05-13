@@ -1,0 +1,33 @@
+version: '3'
+services:
+  mongodb:
+    image: mongo:latest
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_DB_USER}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_DB_PASSWORD}
+    ports:
+      - ${MONGO_DB_PORT}:27017
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - .temp:/data/db
+
+  mongodb-ui:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8006:8081
+    environment:
+      ME_CONFIG_BASICAUTH: false
+      #ME_CONFIG_BASICAUTH_USERNAME: ${MONGO_DB_USER}
+      #ME_CONFIG_BASICAUTH_PASSWORD: ${MONGO_DB_PASSWORD}
+      ME_CONFIG_MONGODB_ADMINUSERNAME: ${MONGO_DB_USER}
+      ME_CONFIG_MONGODB_ADMINPASSWORD: ${MONGO_DB_PASSWORD}
+      ME_CONFIG_MONGODB_URL: mongodb://${MONGO_DB_USER}:${MONGO_DB_PASSWORD}@mongodb:${MONGO_DB_PORT}/
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+
+networks:
+  default:
+   name: mongodb-net
+   driver: bridge
